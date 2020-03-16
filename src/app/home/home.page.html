@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ionic Native Sync Demo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,9 +12,20 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-button expand="block" (click)="copyFile()">Copy File</ion-button>
+    <p></p>
+    <ion-button expand="block" (click)="deleteCopiedFile()">Delete Copied File</ion-button>
+    <p></p>
+    <ion-button expand="block" (click)="insertRecord()">Insert Record</ion-button>
+    <p></p>
+    <ion-button expand="block" (click)="deleteRecord()">Delete Record</ion-button>
+    <p></p>
+    <ion-button expand="block" (click)="updateRecord()">Update Record</ion-button>
+    <p></p>
+    <ion-button expand="block" (click)="doSync()">Sync</ion-button>
+    <ion-progress-bar [value]="syncState.progress"></ion-progress-bar>
+
+    </div>
 </ion-content>
