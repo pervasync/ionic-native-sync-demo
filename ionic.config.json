@@ -1,5 +1,7 @@
 {
   "name": "ionic-native-sync-demo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
