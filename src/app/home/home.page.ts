@@ -23,7 +23,7 @@ export class HomePage {
 
     // Prepare "settings" which contains sync server connection info. 
     let settings = {
-      "syncServerUrl": "http://192.168.0.6:8080/pervasync/server",
+      "syncServerUrl": "http://192.168.0.2:8080/pervasync/server",
       "syncUserName": "user_1",
       "syncUserPassword": "welcome1",
       "onSyncStateChange": this.onSyncStateChange
@@ -144,9 +144,9 @@ export class HomePage {
       //test INSERT
       sql = "BEGIN TRANSACTION";
       await schemaDb.executeSql(sql, []);
-      sql = "INSERT INTO executives(ID, NAME, TITLE) VALUES (?, ?, ?)";
+      sql = "INSERT INTO executives(ID, NAME, TITLE, BIOGRAPHY, IMAGE) VALUES (?, ?, ?, ' ', '20')";
       await schemaDb.executeSql(sql, [9999, 'Pervasync', 'Ionic Native']);
-      sql = "INSERT INTO employees(ID, NAME, TITLE) VALUES (?, ?, ?)";
+      sql = "INSERT INTO employees(ID, NAME, TITLE, BINARY_DATA) VALUES (?, ?, ?, '20')";
       await schemaDb.executeSql(sql, [9999, 'Pervasync', 'Ionic Native']);
       sql = "COMMIT TRANSACTION";
       await schemaDb.executeSql(sql, []);
